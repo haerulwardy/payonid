@@ -18,231 +18,257 @@
 </head>
 <body>
     
-    <!-- header -->
-    <header id="header" class="header">
-        <main class="header-container">
-            <div class="header-logo">
-                <!-- hamburger -->
-                <svg class="header-hamburger" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+    <!-- main -->
+    <div id="main" class="main">
+        <!-- header -->
+        <header id="header" class="header">
+            <main class="header-container">
+                <div class="header-logo">
+                    <!-- hamburger -->
+                    <svg class="header-hamburger" onclick="showMenu()" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                    <!-- logo -->
+                    <a href="" class="logo"><img src="./asetts/logo/Header-logo.svg" alt="Payon logo"></a>
+                </div>
+                <!-- menus -->
+                <div class="header-menus">
+                    <a href="" class="active">Home</a>
+                    <a href="">Tentang Kami</a>
+                    <a href="">Promo</a>
+                    <a href="">Kenapa Harus Kami?</a>
+                </div>
+                <!-- sign -->
+                <div class="header-sign">
+                    <!-- register -->
+                    <i class="header-icon"><svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg></i>
+                    <!-- line -->
+                    <hr>
+                    <!-- Login -->
+                    <i class="header-icon"><svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></i>
+                </div>
+                <!-- download -->
+                <div class="header-download">
+                    <a href="" class="header-download-btn">Download</a>
+                </div>
+            </main>
+        </header>
+        <!-- end header -->
+
+        <!-- hero section -->
+        <section id="hero" class="hero">
+            <main class="hero-container">
+                <!-- hero image -->
+                <div class="hero-img">
+                    <img src="./asetts/images/Hero section.png" width="400" alt="">
+                </div>
+                <!-- hero title -->
+                <div class="hero-title">
+                    <h1>Apa pun transaksinya selalu ada PAYON!</h1>
+
+                    <!-- hero-cta -->
+                    <div class="hero-cta">
+                        <a href="" class="google-play-btn">
+                            <i><img class="" src="./asetts/icons/playstore.svg" alt=""></i>
+                            <span>Google play</span>
+                        </a>
+                        <a href="" class="beli-online-btn">
+                            <i><svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path><path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></i>
+                            <span class="beli-online-title">Beli Online</span>
+                        </a>
+                    </div>
+                </div>
+            </main>
+        </section>
+        <!-- end hero -->
+
+        <!-- section features -->
+        <section id="features" class="features">
+            <main class="features-container">
+                <!-- features header -->
+                <div class="features-header">
+                    <h2>Keuntungan Bertransaksi Di Payon Indonesia🎁</h2>
+                    <hr class="heading">
+                </div>
+                <!-- features card -->
+                <div class="features-card">
+                    <!-- col -->
+                    <div class="features-card-col">
+                        <img src="./asetts/icons/Wishlist.svg" alt="">
+                        <div class="features-card-col-title">
+                            <h3>Mudah</h3>
+                            <p>Segala transaksi dapat di selesaikan hanya dengan beberapa klik.</p>
+                        </div>
+                    </div> 
+                    <!-- col -->
+                    <div class="features-card-col active">
+                        <img src="./asetts/icons/Operator.svg" alt="">
+                        <div class="features-card-col-title">
+                            <h3>CS 24 Jam</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div> 
+                    <!-- col -->
+                    <div class="features-card-col">
+                        <img src="./asetts/icons/Delivery.svg" alt="">
+                        <div class="features-card-col-title">
+                            <h3>Praktis</h3>
+                            <p>Segala transaksi dapat di selesaikan hanya dengan beberapa klik.</p>
+                        </div>
+                    </div> 
+                    <!-- col -->
+                    <div class="features-card-col">
+                        <img src="./asetts/icons/Cashier.svg" alt="">
+                        <div class="features-card-col-title">
+                            <h3>Transaksi Nyaman</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div> 
+                </div>
+            </main>
+        </section>
+        <!-- end features -->
+
+        <!-- section promo -->
+        <section id="promotion" class="promotion">
+            <!-- Slider main container -->
+            <main class="promotion-container">
+                <!-- promotion header -->
+                <div class="features-header">
+                    <h2>Promo🎁</h2>
+                    <hr class="heading promotion-heading">
+                </div>
+
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <a href="" class="swiper-slide">
+                            <img src="./asetts/images/hero-image.jpg" alt="">
+                            <!-- promotion title -->
+                            <div class="promotion-title">
+                                <strong>#DirumahAja</strong>
+                                <h4>Di Payon bisa beli paket data dari rumah</h4>
+                            </div>
+                        </a>
+                        <a href="" class="swiper-slide">
+                            <img src="./asetts/images/hero-image.jpg" alt="">
+                            <!-- promotion title -->
+                            <div class="promotion-title">
+                                <strong>#PayonIndonesia</strong>
+                                <h4>Beli XL Lite di payon ID bisa lebih murah</h4>
+                            </div>
+                        </a>
+                        <a href="" class="swiper-slide">
+                            <img src="./asetts/images/hero-image.jpg" alt="">
+                            <!-- promotion title -->
+                            <div class="promotion-title">
+                                <strong>#PayonID</strong>
+                                <h4>Ultra HD 4k Screenah</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                    <!-- If we need navigation buttons -->
+                    <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+                </div>
+            </main>
+        </section>
+        <!-- end promo -->
+
+        <section id="value" class="value">
+            <main class="value-container">
+                <h2>Beli Pulsa di Payon Indonesia: Mudah, Cepat, Tidak ribet</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sit blanditiis iusto neque reiciendis fugit dolore adipisci nobis! Ratione voluptas non nesciunt porro voluptatibus voluptatum ipsa, nihil quos, omnis, iusto eum ipsum. Aspernatur, omnis totam. Numquam consequuntur a illum totam perferendis incidunt quaerat repudiandae amet exercitationem deleniti reiciendis nesciunt, placeat veniam dolor nemo vel, iusto eum voluptatum ab soluta voluptas rerum. Optio neque nesciunt molestias eveniet, ipsum ex ipsa voluptates! Possimus ea, assumenda numquam natus non ratione doloribus sequi sunt.</p>
+            </main>
+        </section>
+
+        <!-- footer -->
+        <footer id="footer" class="footer">
+            <main class="footer-container">
                 <!-- logo -->
-                <a href="" class="logo"><img src="./asetts/logo/Header-logo.svg" alt="Payon logo"></a>
-            </div>
-            <!-- menus -->
-            <div class="header-menus">
+                <a href="" class="footer-logo">
+                    <img src="./asetts/logo/Header-logo (1).svg" alt="">
+                </a>
+                <!-- menus -->
+                <div class="footer-menus">
+                    <!-- menu 1 -->
+                    <div class="footer-menu">
+                        <h4>Tentang kami</h4>
+                        <div class="footer-p">
+                            <p>Tentang kami</p>
+                            <p>Tentang kami</p>
+                            <p>Tentang kami</p>
+                        </div>
+                    </div>
+                    <!-- menu 2 -->
+                    <div class="footer-menu">
+                        <h4>Tentang kami</h4>
+                        <div class="footer-p">
+                            <p>Tentang kami</p>
+                            <p>Tentang kami</p>
+                            <p>Tentang kami</p>
+                        </div>
+                    </div>
+                    <!-- menu 3 -->
+                    <div class="footer-menu">
+                        <h4>Tentang kami</h4>
+                        <div class="footer-p">
+                            <p>Tentang kami</p>
+                            <p>Tentang kami</p>
+                        </div>
+                    </div>
+                    <!-- menu 3 -->
+                    <div class="footer-menu">
+                        <h4>Tentang kami</h4>
+                        <div class="footer-p">
+                            <p>Tentang kami</p>
+                            <p>Tentang kami</p>
+                        </div>
+                    </div>
+                    <!-- menu 4 -->
+                    <div class="footer-menu">
+                        <h4>Download Aplikasi kami di</h4>
+                        <!-- social media -->
+                        <a href="" class="google-play-btn footer-btn">
+                            <i><img class="" src="./asetts/icons/playstore.svg" alt=""></i>
+                            <span>Google play</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- hr -->
+                <hr class="footer-hr">
+                <!-- copyright -->
+                <span class="footer-copyright">© 2021 Payon indonesia</span>
+
+            </main>
+        </footer>
+        <!-- end footer -->
+    </div>
+    <!-- main -->
+    <!-- responsive-menu -->
+    <div id="responsive-menu" class="responsive-menu">
+        <main class="responsive-container">
+            <div class="responsive-menus">
                 <a href="" class="active">Home</a>
                 <a href="">Tentang Kami</a>
                 <a href="">Promo</a>
                 <a href="">Kenapa Harus Kami?</a>
             </div>
-            <!-- sign -->
-            <div class="header-sign">
-                <!-- register -->
-                <i class="header-icon"><svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg></i>
-                <!-- line -->
-                <hr>
-                <!-- Login -->
-                <i class="header-icon"><svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></i>
-            </div>
-            <!-- download -->
-            <div class="header-download">
-                <a href="" class="header-download-btn">Download</a>
+            <div class="responsive-icon">
+                <a href="" class="responsive-login">
+                    <i><svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></i>
+                    <span>Masuk</span>
+                </a>
+                <a href="" class="responsive-register">
+                    <i><svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg></i>
+                    <span>Daftar</span>
+                </a>
             </div>
         </main>
-    </header>
-    <!-- end header -->
-
-    <!-- hero section -->
-    <section id="hero" class="hero">
-        <main class="hero-container">
-            <!-- hero image -->
-            <div class="hero-img">
-                <img src="./asetts/images/Hero section.png" width="400" alt="">
-            </div>
-            <!-- hero title -->
-            <div class="hero-title">
-                <h1>Apa pun transaksinya selalu ada PAYON!</h1>
-
-                <!-- hero-cta -->
-                <div class="hero-cta">
-                    <a href="" class="google-play-btn">
-                        <i><img class="" src="./asetts/icons/playstore.svg" alt=""></i>
-                        <span>Google play</span>
-                    </a>
-                    <a href="" class="beli-online-btn">
-                        <i><svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path><path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></i>
-                        <span class="beli-online-title">Beli Online</span>
-                    </a>
-                </div>
-            </div>
-        </main>
-    </section>
-    <!-- end hero -->
-
-    <!-- section features -->
-    <section id="features" class="features">
-        <main class="features-container">
-            <!-- features header -->
-            <div class="features-header">
-                <h2>Keuntungan Bertransaksi Di Payon Indonesia🎁</h2>
-                <hr class="heading">
-            </div>
-            <!-- features card -->
-            <div class="features-card">
-                <!-- col -->
-                <div class="features-card-col">
-                    <img src="./asetts/icons/Wishlist.svg" alt="">
-                    <div class="features-card-col-title">
-                        <h3>Mudah</h3>
-                        <p>Segala transaksi dapat di selesaikan hanya dengan beberapa klik.</p>
-                    </div>
-                </div> 
-                <!-- col -->
-                <div class="features-card-col active">
-                    <img src="./asetts/icons/Operator.svg" alt="">
-                    <div class="features-card-col-title">
-                        <h3>CS 24 Jam</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div> 
-                <!-- col -->
-                <div class="features-card-col">
-                    <img src="./asetts/icons/Delivery.svg" alt="">
-                    <div class="features-card-col-title">
-                        <h3>Praktis</h3>
-                        <p>Segala transaksi dapat di selesaikan hanya dengan beberapa klik.</p>
-                    </div>
-                </div> 
-                <!-- col -->
-                <div class="features-card-col">
-                    <img src="./asetts/icons/Cashier.svg" alt="">
-                    <div class="features-card-col-title">
-                        <h3>Transaksi Nyaman</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div> 
-            </div>
-        </main>
-    </section>
-    <!-- end features -->
-
-    <!-- section promo -->
-    <section id="promotion" class="promotion">
-        <!-- Slider main container -->
-        <main class="promotion-container">
-            <!-- promotion header -->
-            <div class="features-header">
-                <h2>Promo🎁</h2>
-                <hr class="heading promotion-heading">
-            </div>
-
-            <div class="swiper-container">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <a href="" class="swiper-slide">
-                        <img src="./asetts/images/hero-image.jpg" alt="">
-                        <!-- promotion title -->
-                        <div class="promotion-title">
-                            <strong>#DirumahAja</strong>
-                            <h4>Di Payon bisa beli paket data dari rumah</h4>
-                        </div>
-                    </a>
-                    <a href="" class="swiper-slide">
-                        <img src="./asetts/images/hero-image.jpg" alt="">
-                        <!-- promotion title -->
-                        <div class="promotion-title">
-                            <strong>#PayonIndonesia</strong>
-                            <h4>Beli XL Lite di payon ID bisa lebih murah</h4>
-                        </div>
-                    </a>
-                    <a href="" class="swiper-slide">
-                        <img src="./asetts/images/hero-image.jpg" alt="">
-                        <!-- promotion title -->
-                        <div class="promotion-title">
-                            <strong>#PayonID</strong>
-                            <h4>Ultra HD 4k Screenah</h4>
-                        </div>
-                    </a>
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-            
-                <!-- If we need navigation buttons -->
-                <!-- <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div> -->
-            </div>
-        </main>
-    </section>
-    <!-- end promo -->
-
-    <section id="value" class="value">
-        <main class="value-container">
-            <h2>Beli Pulsa di Payon Indonesia: Mudah, Cepat, Tidak ribet</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sit blanditiis iusto neque reiciendis fugit dolore adipisci nobis! Ratione voluptas non nesciunt porro voluptatibus voluptatum ipsa, nihil quos, omnis, iusto eum ipsum. Aspernatur, omnis totam. Numquam consequuntur a illum totam perferendis incidunt quaerat repudiandae amet exercitationem deleniti reiciendis nesciunt, placeat veniam dolor nemo vel, iusto eum voluptatum ab soluta voluptas rerum. Optio neque nesciunt molestias eveniet, ipsum ex ipsa voluptates! Possimus ea, assumenda numquam natus non ratione doloribus sequi sunt.</p>
-        </main>
-    </section>
-
-    <!-- footer -->
-    <footer id="footer" class="footer">
-        <main class="footer-container">
-            <!-- logo -->
-            <a href="" class="footer-logo">
-                <img src="./asetts/logo/Header-logo (1).svg" alt="">
-            </a>
-            <!-- menus -->
-            <div class="footer-menus">
-                <!-- menu 1 -->
-                <div class="footer-menu">
-                    <h4>Tentang kami</h4>
-                    <div class="footer-p">
-                        <p>Tentang kami</p>
-                        <p>Tentang kami</p>
-                        <p>Tentang kami</p>
-                    </div>
-                </div>
-                <!-- menu 2 -->
-                <div class="footer-menu">
-                    <h4>Tentang kami</h4>
-                    <div class="footer-p">
-                        <p>Tentang kami</p>
-                        <p>Tentang kami</p>
-                        <p>Tentang kami</p>
-                    </div>
-                </div>
-                <!-- menu 3 -->
-                <div class="footer-menu">
-                    <h4>Tentang kami</h4>
-                    <div class="footer-p">
-                        <p>Tentang kami</p>
-                        <p>Tentang kami</p>
-                    </div>
-                </div>
-                <!-- menu 3 -->
-                <div class="footer-menu">
-                    <h4>Tentang kami</h4>
-                    <div class="footer-p">
-                        <p>Tentang kami</p>
-                        <p>Tentang kami</p>
-                    </div>
-                </div>
-                <!-- menu 4 -->
-                <div class="footer-menu">
-                    <h4>Download Aplikasi kami di</h4>
-                    <!-- social media -->
-                    <a href="" class="google-play-btn footer-btn">
-                        <i><img class="" src="./asetts/icons/playstore.svg" alt=""></i>
-                        <span>Google play</span>
-                    </a>
-                </div>
-            </div>
-            <!-- hr -->
-            <hr class="footer-hr">
-            <!-- copyright -->
-            <span class="footer-copyright">© 2021 Payon indonesia</span>
-
-        </main>
-    </footer>
-    <!-- end footer -->
+    </div>
+    <!-- end responsive-menu -->
 
 </body>
 <!-- script -->
