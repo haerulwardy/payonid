@@ -142,8 +142,6 @@ body {
 .hero-title-icon {
     margin-top: 3em;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .title-icon-container {
     background-color: var(--default-color);
@@ -408,6 +406,10 @@ body {
     .header-close.show {
         /* visibility: visible; */
         display: block;
+    }
+    .hero-title-icon {
+        justify-content: center;
+        align-items: center;
     }
     .logo {
         /* justify-self: center; */
