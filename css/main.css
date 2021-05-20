@@ -142,6 +142,8 @@ body {
 .hero-title-icon {
     margin-top: 3em;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .title-icon-container {
     background-color: var(--default-color);
