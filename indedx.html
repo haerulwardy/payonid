@@ -26,8 +26,12 @@
                 <div class="header-logo">
                     <!-- hamburger -->
                     <svg class="header-hamburger" onclick="showMenu()" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                    <!-- close -->
+                    <svg class="header-close" onclick="closeMenu()" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+
                     <!-- logo -->
-                    <a href="" class="logo"><img src="./asetts/logo/Header-logo.svg" alt="Payon logo"></a>
+                    <a href="" id="main-logo" class="logo logo-hide"><img src="./asetts/logo/Header-logo.svg" alt="Payon logo"></a>
+                    <a href="" id="secondary-logo" class="logo hide-logo"><img src="./asetts/logo/Header-logo (1).svg" alt="Payon logo"></a>
                 </div>
                 <!-- menus -->
                 <div class="header-menus">
@@ -47,7 +51,7 @@
                 </div>
                 <!-- download -->
                 <div class="header-download">
-                    <a href="" class="header-download-btn">Download</a>
+                    <a href="" id="btn-dwonload" class="header-download-btn">Download</a>
                 </div>
             </main>
         </header>
@@ -74,6 +78,26 @@
                             <i><svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path><path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></i>
                             <span class="beli-online-title">Beli Online</span>
                         </a>
+                    </div>
+
+                    <!-- icon -->
+                    <div class="hero-title-icon">
+                        <div class="title-icon-container">
+                            <img src="./asetts/icons/smartphone.svg" class="pulse hero-icon" alt="">
+                            <p>Pulsa</p>
+                        </div>
+                        <div class="title-icon-container">
+                            <img src="./asetts/icons/gamepad.svg" class="voucher hero-icon" alt="">
+                            <p>Voucher</p>
+                        </div>
+                        <div class="title-icon-container">
+                            <img src="./asetts/icons/video.svg" class="kuota hero-icon" alt="">
+                            <p>Kuota</p>
+                        </div>
+                        <div class="title-icon-container">
+                            <svg class="w-6 h-6 hero-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                            <p>Lainya</p>
+                        </div>
                     </div>
                 </div>
             </main>
