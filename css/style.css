@@ -41,7 +41,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 999;
     transition: ease 0.2s;
 }
 .header.scroll {
@@ -184,6 +184,13 @@ body {
     margin-top: 2em;
 }
 .google-play-btn {
+    margin-right: 2em;
+    transition: var(--transition);
+}
+.google-play-btn:hover {
+    opacity: 0.8;
+}
+/* .google-play-btn {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -195,8 +202,8 @@ body {
     font-weight: 600;
     border-radius: 2em;
     transition: var(--transition);
-}
-.google-play-btn:hover {
+} */
+/* .google-play-btn:hover {
     background: var(--gradient-color-hover);
 }
 .google-play-btn:hover img {
@@ -206,7 +213,7 @@ body {
     width: 26px;
     margin-right: 0.5em;
     transition: var(--transition);
-}
+} */
 .beli-online-btn {
     color: var(--default-color);
     text-decoration: none;
@@ -512,6 +519,7 @@ body {
         transition: ease-in-out 0.2s;
         opacity: 0.2;
         visibility: hidden;
+        z-index: 99;
     }
     .responsive-menu.active {
         height: 100vh;

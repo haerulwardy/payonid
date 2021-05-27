@@ -182,3 +182,12 @@ headerMenu.forEach(menu => {
     menu.classList.add('active');
   })
 })
+
+// res clicked
+const resMenu = document.querySelectorAll('.res-menu');
+resMenu.forEach(res => {
+  res.addEventListener('click', function() {
+    closeChangeIcon();
+    closeDropMenuAnimation()
+  })
+})
