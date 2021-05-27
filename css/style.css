@@ -57,6 +57,7 @@ body {
 }
 .header-logo {
     display: flex;
+    /* justify-content: space-between; */
 }
 .hide-logo {
     display: none;
@@ -120,118 +121,87 @@ body {
 /* end header */
 /* hero */
 .hero {
-    min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../asetts/images/payon-banner.jpg");
+    height: 100vh;
+    overflow-y: hidden;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../asetts/images/payon-banner.jpg');
     background-size: cover;
     background-position: right;
-    padding: 6em 8em;
-    overflow: hidden;
+    padding: 10em 8em;
 }
 .hero-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
-.hero-img {
-    position: relative;
-}
-.hero-img .phone {
-    position: absolute;
-    top: -200px;
+.phone {
+    margin-right: 6em;
 }
 .hero-title {
-    width: 600px;
-    margin-top: 4em;
+    width: 60%;
 }
 .hero-title h1 {
-    color: var(--default-color);
     font-size: 3.75em;
-}
-.hero-title-icon {
-    margin-top: 3em;
-    display: flex;
-}
-.title-icon-container {
-    background-color: var(--default-color);
-    padding: 0.5em 1.25em;
-    text-align: center;
-    border-radius: 0.45em;
-    margin-right: 1em;
-    cursor: pointer;
-    transition: var(--transition);
-}
-.title-icon-container:hover {
-    box-shadow: var(--global-shadow);
-    background-color: #f8f9fab7;
-}
-.hero-icon {
-    transition: var(--transition);
-}
-.title-icon-container:hover .hero-icon{
-    transform: scale(1.5);
-}
-.title-icon-container p {
-    color: var(--text-color);
-    font-weight: 600;
-    margin-top: 0.75em;
-}
-.hero-title-icon img, .hero-title-icon svg {
-    width: 30px;
+    color: var(--default-color);
 }
 .hero-cta {
     display: flex;
+    justify-content: stretch;
     align-items: center;
     margin-top: 2em;
+    /* background-color: white; */
+}
+.beli-online-icon {
+    width: 30px;
+    margin-right: 0.75em;
+    transition: var(--transition);
 }
 .google-play-btn {
     margin-right: 2em;
-    transition: var(--transition);
 }
-.google-play-btn:hover {
-    opacity: 0.8;
-}
-/* .google-play-btn {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-decoration: none;
-    background: var(--gradient-color);
-    padding: 0.85em 2.5em;
-    margin-right: 2em;
-    color: var(--default-color);
-    font-weight: 600;
-    border-radius: 2em;
-    transition: var(--transition);
-} */
-/* .google-play-btn:hover {
-    background: var(--gradient-color-hover);
-}
-.google-play-btn:hover img {
-    margin-right: 1em;
-}
-.google-play-btn img {
-    width: 26px;
-    margin-right: 0.5em;
-    transition: var(--transition);
-} */
 .beli-online-btn {
+    display: flex;
+    align-items: center;
     color: var(--default-color);
     text-decoration: none;
     transition: var(--transition);
-    display: flex;
-    align-items: center;
-    opacity: 0.6;
+}
+.beli-online-btn span {
+    font-weight: 600;
+}
+.beli-online-btn:hover .beli-online-icon {
+    margin-right: 1.25em;
 }
 .beli-online-btn:hover {
-    opacity: 1;
+    opacity: 0.6;
 }
-.beli-online-btn:hover svg {
-    margin-right: 1em;
+.beli-online-title {
+    width: 120px;
 }
-.beli-online-btn svg {
-    width: 26px;
-    margin-right: 0.5em;
+.hero-title-icon {
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 2.5em;
+}
+.hero-icon {
+    width: 36px;
     transition: var(--transition);
+}
+.title-icon-container {
+    background-color: var(--default-color);
+    padding: 0.7em 1.5em;
+    margin-right: 2em;
+    border-radius: 0.75em;
+    cursor: pointer;
+    text-align: center;
+    transition: var(--transition);
+}
+.title-icon-container:hover .hero-icon {
+    transform: scale(1.5);
+}
+.title-icon-container:hover {
+    background-color: #e4e6e7;
+}
+.title-icon-container p {
+    margin-top: 1em;
+    font-weight: 600;
 }
 /* end hero */
 
@@ -491,6 +461,75 @@ body {
 
 /* responmsive breakpoints */
 @media (max-width: 720px) {
+    .hero {
+        min-height: 100vh;
+        padding: 6em 2em;
+    }
+    .hero-container {
+        justify-content: center;
+    }
+    .phone {
+        display: none;
+    }
+    .hero-title {
+        width: 100%;
+    }
+    .hero-title h1 {
+        font-size: 3em;
+        text-align: center;
+    }
+    .hero-cta {
+        display: flex;
+        justify-content: center;
+        /* background-color: white; */
+    }
+    .beli-online-icon {
+        width: 30px;
+        margin-right: 0.75em;
+        transition: var(--transition);
+    }
+    .google-play-btn {
+        margin-right: 2em;
+    }
+    .beli-online-btn {
+        display: flex;
+        align-items: center;
+        color: var(--default-color);
+        text-decoration: none;
+        transition: var(--transition);
+    }
+    .beli-online-btn span {
+        font-weight: 600;
+    }
+    .beli-online-btn:hover .beli-online-icon {
+        margin-right: 1.25em;
+    }
+    .beli-online-btn:hover {
+        opacity: 0.6;
+    }
+    .beli-online-title {
+        width: 120px;
+    }
+    .hero-title-icon {
+        display: flex;
+        justify-content: center;
+        margin-top: 2.5em;
+    }
+    .hero-icon {
+        width: 36px;
+    }
+    .title-icon-container {
+        background-color: var(--default-color);
+        padding: 0.7em 1.5em;
+        margin-right: 2em;
+        border-radius: 0.75em;
+        cursor: pointer;
+        text-align: center;
+    }
+    .title-icon-container p {
+        margin-top: 1em;
+        font-weight: 600;
+    }
     .header-container {
         justify-content: space-between;
     }
@@ -518,41 +557,7 @@ body {
     .header-close.show {
         /* visibility: visible; */
         display: block;
-    }
-    .hero-title-icon {
-        justify-content: center;
-        align-items: center;
-    }
-    .hero-img .phone {
-        display: none;
-    }
-    .logo {
-        /* justify-self: center; */
-        /* margin: auto; */
-    }
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero-img {
-        order: 2;
-        margin-bottom: 4em;
-    }
-    .hero-img img {
-        width: 80%;
-    }
-    .hero-title {
-        order: 1;
-        text-align: center;
-        margin-top: 6em;
-        width: 500px;
-    }
-    .hero-title h1 {
-        font-size: 3.25em;
-    }
-    .hero-cta {
-        justify-content: center;
-    }        
+    }    
     .swiper-slide img {
         width: 100%;
     }
@@ -674,10 +679,6 @@ body {
         align-items: center;
         align-content: center;
     }
-    .hero {
-        padding-left: 6em;
-        padding-right: 6em;
-    }
     .features {
         padding-left: 4em;
         padding-right: 4em;
@@ -709,6 +710,76 @@ body {
 
 /* 540 */
 @media (max-width: 540px) {
+    .hero {
+        min-height: 100vh;
+        padding: 6em 2em;
+    }
+    .hero-container {
+        justify-content: center;
+    }
+    .hero-title h1 {
+        font-size: 2.75em;
+        text-align: center;
+    }
+    .hero-cta {
+        display: flex;
+        width: 40%;
+        margin: 2em auto;
+        justify-content: center;
+        /* background-color: white; */
+    }
+    .beli-online-icon {
+        width: 30px;
+        margin-right: 0.75em;
+        transition: var(--transition);
+    }
+    .google-play-btn {
+        margin-right: 2em;
+        width: 130px;
+    }
+    .beli-online-btn {
+        display: flex;
+        align-items: center;
+        color: var(--default-color);
+        text-decoration: none;
+        transition: var(--transition);
+    }
+    .beli-online-btn span {
+        font-weight: 600;
+    }
+    .beli-online-btn:hover .beli-online-icon {
+        margin-right: 1.25em;
+    }
+    .beli-online-btn:hover {
+        opacity: 0.6;
+    }
+    .beli-online-title {
+        width: 120px;
+    }
+    .hero-title-icon {
+        display: flex;
+        justify-content: center;
+        margin-top: 2.5em;
+    }
+    .hero-icon {
+        width: 26px;
+    }
+    .title-icon-container {
+        background-color: var(--default-color);
+        padding: 0.7em 1em;
+        margin-right: 1em;
+        border-radius: 0.75em;
+        cursor: pointer;
+        text-align: center;
+    }
+    .title-icon-container p {
+        margin-top: 1em;
+        font-weight: 600;
+    }
+
+    .header-download-btn {
+        display: none;
+    }
     .header-container {
         justify-content: space-between;
     }
@@ -723,7 +794,7 @@ body {
     .header-hamburger {
         width: 32px;
         display: block;
-        margin-right: 2em;
+        margin-right: 1em;
     }
     .header-hamburger.hide {
         display: none;
@@ -739,29 +810,6 @@ body {
     .logo {
         /* justify-self: center; */
         /* margin: auto; */
-    }
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero-img {
-        order: 2;
-        margin-bottom: 4em;
-    }
-    .hero-img img {
-        width: 100%;
-    }
-    .hero-title {
-        order: 1;
-        text-align: center;
-        margin-top: 6em;
-        width: 500px;
-    }
-    .hero-title h1 {
-        font-size: 3.25em;
-    }
-    .hero-cta {
-        justify-content: center;
     }
     .features {
         padding: 4em 4em;
@@ -882,12 +930,6 @@ body {
     .footer-logo {
         margin-left: 60px;
     }
-    .hero-title {
-        padding: 0 1.25em;
-    }
-    .hero-title-icon {
-        padding: 0 2em;
-    }
 
     /* bottom */
 .bottom-bar {
@@ -953,10 +995,6 @@ body {
 }
 /* 300 */
 @media (max-width: 230px) {
-    .hero {
-        padding-left: 6em;
-        padding-right: 6em;
-    }
     .features {
         padding-left: 2em;
         padding-right: 2em;
@@ -1004,29 +1042,6 @@ body {
     .logo {
         /* justify-self: center; */
         /* margin: auto; */
-    }
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero-img {
-        order: 2;
-        margin-bottom: 4em;
-    }
-    .hero-img img {
-        width: 100%;
-    }
-    .hero-title {
-        order: 1;
-        text-align: center;
-        margin-top: 6em;
-        width: 300px;
-    }
-    .hero-title h1 {
-        font-size: 3em;
-    }
-    .hero-cta {
-        justify-content: center;
     }
     .features {
         padding: 4em;

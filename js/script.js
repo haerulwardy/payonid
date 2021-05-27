@@ -106,15 +106,12 @@ window.addEventListener('scroll', function() {
     // show logo
     showLogo();
     // btn
-    showBtnDownload();
   } else if ( window.scrollY > 0 ) {
     changeBgHeader('add');
     headerMenus('add');
 
     // hide logo
     hideLogo();
-    // btn
-    document.getElementById('btn-download').classList.add('scroll-btn');
   }
 })
 
