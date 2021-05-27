@@ -762,18 +762,18 @@ body {
         margin-top: 2.5em;
     }
     .hero-icon {
-        width: 26px;
+        width: 18px;
     }
     .title-icon-container {
         background-color: var(--default-color);
-        padding: 0.7em 1em;
+        padding: 0.5em;
         margin-right: 1em;
         border-radius: 0.75em;
         cursor: pointer;
         text-align: center;
     }
     .title-icon-container p {
-        margin-top: 1em;
+        margin-top: 0.5em;
         font-weight: 600;
     }
 
