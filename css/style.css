@@ -43,6 +43,7 @@ body {
     width: 100%;
     padding: 1em 2em;
     background-color: var(--default-color);
+    box-shadow: 2px 0 20px rgba(0,0,0,0.4);
     /* background: var(--gradient-color); */
     /* position: relative; */
     position: fixed;
@@ -138,8 +139,13 @@ body {
 .hero-container {
     display: flex;
 }
+.hero-img {
+    position: relative;
+    /* background-color: red; */
+    width: 50%;
+}
 .phone {
-    margin-right: 6em;
+    position: absolute;
 }
 .hero-title {
     width: 60%;
@@ -147,6 +153,12 @@ body {
 .hero-title h1 {
     font-size: 2.75em;
     color: var(--default-color);
+}
+.hero-title-p {
+    font-size: 2em;
+    color: var(--default-color);
+    opacity: 0.6;
+    margin-top: 0.5em;
 }
 .hero-cta {
     display: flex;
@@ -199,6 +211,7 @@ body {
 }
 .hero-title-icon {
     display: flex;
+    flex-wrap: wrap;
     /* justify-content: space-between; */
     margin-top: 2.5em;
 }
@@ -304,7 +317,7 @@ body {
 }
 .action-title h3 {
     font-size: 2.5em;
-    font-weight: 600;
+    font-weight: bold;
     color: var(--text-color);
 }
 .action-title p {
@@ -333,6 +346,11 @@ body {
     /* background: var(--gradient-color); */
     background-color: hsl(210, 17%, 95%);
     padding: 6em 4em;
+}
+.promotion-header h2 {
+    color: var(--primary-color);
+    font-size: 1.75em;
+    text-align: center;
 }
 .swiper-container {
     width: 100%;
@@ -488,13 +506,13 @@ body {
 /* responmsive breakpoints */
 @media (max-width: 720px) {
     .hero {
-        min-height: 100vh;
+        height: 110vh;
         padding: 6em 2em;
     }
     .hero-container {
         justify-content: center;
     }
-    .phone {
+    .hero-img {
         display: none;
     }
     .hero-title {
@@ -502,6 +520,13 @@ body {
     }
     .hero-title h1 {
         font-size: 3em;
+        text-align: center;
+    }
+    .hero-title-p {
+        font-size: 1.5em;
+        color: var(--default-color);
+        opacity: 0.6;
+        margin-top: 0.5em;
         text-align: center;
     }
     .hero-cta {
@@ -540,9 +565,10 @@ body {
         display: flex;
         justify-content: center;
         margin-top: 2.5em;
+        padding-bottom: 2em;
     }
     .hero-icon {
-        width: 36px;
+        width: 30px;
     }
     .title-icon-container {
         background-color: var(--default-color);
@@ -748,10 +774,9 @@ body {
         text-align: center;
     }
     .hero-cta {
-        display: flex;
-        width: 40%;
+        display: block;
+        width: 100%;
         margin: 2em auto;
-        justify-content: center;
         /* background-color: white; */
     }
     .beli-online-icon {
@@ -760,15 +785,21 @@ body {
         transition: var(--transition);
     }
     .google-play-btn {
-        margin-right: 2em;
-        width: 130px;
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
     .beli-online-btn {
         display: flex;
         align-items: center;
+        justify-content: center;
         color: var(--default-color);
         text-decoration: none;
         transition: var(--transition);
+        width: 100%;
+        margin: 1em 0;
+        /* text-align: center; */
     }
     .beli-online-btn span {
         font-weight: 600;
@@ -786,17 +817,6 @@ body {
         display: flex;
         justify-content: center;
         margin-top: 2.5em;
-    }
-    .hero-icon {
-        width: 18px;
-    }
-    .title-icon-container {
-        background-color: var(--default-color);
-        padding: 0.5em;
-        margin-right: 1em;
-        border-radius: 0.75em;
-        cursor: pointer;
-        text-align: center;
     }
     .title-icon-container p {
         margin-top: 0.5em;
@@ -931,8 +951,8 @@ body {
         padding-right: 3em;
     }
     .promotion {
-        padding-left: 3em;
-        padding-right: 3em;
+        padding-left: 1em;
+        padding-right: 1em;
     }
     .value {
         padding-left: 3em;
@@ -954,7 +974,7 @@ body {
         margin-right: 1em;
     }
     .footer-logo {
-        margin-left: 60px;
+        margin: 0 auto;
     }
 
     /* bottom */
@@ -1017,10 +1037,13 @@ body {
     padding: 2em 2em;
     background: var(--gradient-color);
 }
+.lainya {
+    margin-top: 1em;
+}
 
 }
 /* 300 */
-@media (max-width: 230px) {
+@media (max-width: 350px) {
     .features {
         padding-left: 2em;
         padding-right: 2em;
@@ -1044,6 +1067,9 @@ body {
     .header-menus {
         /* visibility: hidden; */
         display: none;
+    }
+    .lainya {
+        margin-top: 1em;
     }
     .header-sign {
         display: none;
