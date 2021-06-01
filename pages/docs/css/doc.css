@@ -55,10 +55,6 @@ hr {
 }
 .header-logo {
     display: flex;
-    /* justify-content: space-between; */
-}
-.hide-logo {
-    display: none;
 }
 .header-menus {
     font-weight: 600;
@@ -170,5 +166,119 @@ hr {
     font-size: 1.5em;
     opacity: 0.9;
 }
+h3, h4 {
+    opacity: 0.7;
+    font-weight: bold;
+}
+p, ul {
+    opacity: 0.6;
+    margin-top: 0.25em;
+}
+.response {
+    margin-top: 2em;
+}
+.url, .method, .parameters {
+    margin-top: 1em;
+}
+ul {
+    padding-left: 2em;
+}
+pre {
+    margin-top: 1em !important;
+}
+.example {
+    margin-top: 2em;
+}
 
-/* break point */
+/* rincian */
+.rincian-content, .produk-content, .pembelian-content, .transaksi-content {
+    margin-top: 4em;
+}
+
+/* responsive menu */
+.res-doc {
+    display: none;
+}
+
+@media (max-width: 540px) {
+    .header-menus {
+        display: none;
+    }
+    .header-sign {
+        display: none;
+    }
+    .header-download {
+        display: none;
+    }
+    .header-hamburger {
+        display: block;
+    }
+    .sidebar {
+        display: none;
+    }
+    .content {
+        display: none;
+    }
+
+    /* res */
+    .res-doc {
+        display: block;
+        margin-top: 6em;
+    }
+    .res-container {
+        padding: 1em 2em;
+    }
+    .res-title {
+        color: var(--text-color);
+        font-size: 1.75em;
+        text-align: center;
+        font-weight: bold;
+    }
+    .res-menus {
+        width: 100%;
+    }
+    .res-menu {
+        /* background-color: var(--primary-color); */
+        margin-top: 0.5em;
+        text-align: center;
+        background-color: var(--default-color);
+        padding: 1em 0;
+        cursor: pointer;
+    }
+    .res-menu:hover {
+        background-color: hsl(210, 17%, 95%);
+    }
+    .res-menu span {
+        text-decoration: none;
+        margin: 0 auto;;
+        font-weight: bold;
+        opacity: 0.8;
+    }
+    .res-content {
+        display: none;
+        margin-top: 1em;
+    }
+    .res-content.active {
+        display: block;
+    }
+    .res-content-menu a{
+        /* background-color: red; */
+        padding: 0.5em 2em;
+        border-radius: 0.5em;
+        text-decoration: none;
+        color: var(--text-color);
+        opacity: 0.6;
+        font-weight: bold;
+    }
+    .res-content-menu a:hover {
+        opacity: 1;
+    }
+    .res-content-menu a.active {
+        border-bottom: 3px solid var(--primary-color);
+        opacity: 1;
+    }
+    .res-login-content {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+}
