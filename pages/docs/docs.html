@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./css/doc.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- prism -->
+    <link rel="stylesheet" href="./prism/prism.css">
     <title>Documentation | Payon Id Documentation</title>
 </head>
 <body>
@@ -53,7 +56,7 @@
     <section class="sidebar" id="sidebar">
         <main class="sidebar-container">
             <!-- title -->
-            <h2 class="sidebar-title">Documentation API</h2>
+            <h1 class="sidebar-title">Documentation API</h1>
             <div class="sidebar-menu">
                 <a href="" class="active">Login</a>
                 <a href="">Rincian Akun</a>
@@ -63,7 +66,135 @@
             </div>
         </main>
     </section>
+
+    <!-- content -->
+    <section class="content" id="content">
+        <main class="content-container">
+            <!-- login -->
+            <div class="login-content" id="login">
+                <h2 class="content-title login">Login</h2>
+                <hr>
+                <div class="login-container">
+                    <div class="request">
+                        <h3>Request</h3>
+                        <b>URL</b>
+                        <p>https://payon.id/api/main/login</p>
+                        <b>Method</b>
+                        <p>POST or GET</p>
+                        <b>Parameters</b>
+                        <ul>
+                            <li>username : (Required) Username akun</li>
+                            <li>password : (Required) Password akun</li>
+                        </ul>
+                    </div>
+
+                    <!-- response -->
+                    <div class="response">
+                        <h3>Response</h3>
+                        <pre><code class="language-json">{
+        "success": true,
+        "results": {
+            "otp": "",
+            "id": "1234",
+            "name": "My Name",
+            "username": "payonid",
+            "balance": "10000",
+            "token": "1234:xM3pN0FdotaTinGbLwhz7v8RfKC4SYgU"
+        }
+    }</code></pre>
+                    </div>
+
+                    <!-- Example -->
+                    <div class="example">
+                        <h3>Example</h3>
+    <pre><code class="language-php">?php
+    
+    $parameters = array(
+        "username" => "",
+        "password" => "",
+        );
+    
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, "https://payon.id/api/main/login");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($parameters));
+    $response = curl_exec($ch);
+    curl_close($ch);</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- rincian -->
+            <div class="login-content" id="rincian">
+                <h2 class="content-title login">Login</h2>
+                <hr>
+                <div class="login-container">
+                    <div class="request">
+                        <h3>Request</h3>
+                        <b>URL</b>
+                        <p>https://payon.id/api/main/login</p>
+                        <b>Method</b>
+                        <p>POST or GET</p>
+                        <b>Parameters</b>
+                        <ul>
+                            <li>username : (Required) Username akun</li>
+                            <li>password : (Required) Password akun</li>
+                        </ul>
+                    </div>
+
+                    <!-- response -->
+                    <div class="response">
+                        <h3>Response</h3>
+                        <pre><code class="language-json">{
+        "success": true,
+        "results": {
+            "otp": "",
+            "id": "1234",
+            "name": "My Name",
+            "username": "payonid",
+            "balance": "10000",
+            "token": "1234:xM3pN0FdotaTinGbLwhz7v8RfKC4SYgU"
+        }
+    }</code></pre>
+                    </div>
+
+                    <!-- Example -->
+                    <div class="example">
+                        <h3>Example</h3>
+    <pre><code class="language-php">?php
+    
+    $parameters = array(
+        "username" => "",
+        "password" => "",
+        );
+    
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, "https://payon.id/api/main/login");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($parameters));
+    $response = curl_exec($ch);
+    curl_close($ch);</code></pre>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- daftar -->
+            <h2 class="content-title login">Daftar Produk</h2>
+            <!-- pembelian -->
+            <h2 class="content-title login">Pembelian</h2>
+            <!-- transaksi -->
+            <h2 class="content-title login">Cek Transaksi</h2>
+        </main>
+    </section>
     <!-- end documentation area -->
     
 </body>
+<!-- script -->
+<script src="./js/docs.js"></script>
+<!-- prism -->
+<script src="./prism/prism.js"></script>
 </html>

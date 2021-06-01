@@ -23,19 +23,12 @@ body {
     font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
 }
-.heading {
-    width: 200px;
-    margin: 0 auto;
-    border: 2px solid var(--primary-color);
+hr {
+    margin: 1em 0 1em 0;
+    border: 1px solid var(--text-color);
+    opacity: 0.1;
     border-radius: 2em;
-    margin-top: 1em;
-}
-.features-hr {
-    width: 200px;
-    margin: 0 auto;
-    border: 2px solid var(--default-color);
-    border-radius: 2em;
-    margin-top: 1em;
+    /* margin-top: 1em; */
 }
 
 /* header */
@@ -127,6 +120,8 @@ body {
 
 /* sidebar */
 .sidebar {
+    position: fixed;
+    left: 0;
     padding: 7em 3em;
     background: var(--default-color);
     width: 380px;
@@ -156,7 +151,7 @@ body {
     border-radius: 0.5em;
     font-weight: bold;
     opacity: 0.6;
-    transition: var(--transition);
+    /* transition: var(--transition); */
 }
 .sidebar-menu a.active {
     border-bottom: 3px solid var(--primary-color);
@@ -164,6 +159,16 @@ body {
 }
 .sidebar-menu a:hover {
     opacity: 1;
+}
+
+/* content */
+.content {
+    margin-left: 390px;
+    padding: 7em 3em;
+}
+.content-title {
+    font-size: 1.5em;
+    opacity: 0.9;
 }
 
 /* break point */
