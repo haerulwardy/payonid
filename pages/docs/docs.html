@@ -705,28 +705,142 @@ curl_close($ch);</code></pre>
                         <div class="res-menu-link request">
                             <h3>Request</h3>
                             <h4 class="url">URL</h4>
-                            <p>https://payon.id/api/main/login</p>
+                            <p>https://payon.id/api/main/get-vouchers</p>
                             <h4 class="method">Method</h4>
                             <p>POST or GET</p>
                             <h4 class="parameters">Parameters</h4>
                             <ul>
-                                <li>username : (Required) Username akun</li>
-                                <li>password : (Required) Password akun</li>
+                                <li>auth_username : (Required) Username akun</li>
+                                <li>auth_token : (Required) Token yang didapat ketika berhasil login/li>
                             </ul>
                         </div>
                         <!-- response -->
                         <div class="res-menu-link response">
                             <h3>Response</h3>
-                            <pre><code class="language-json">{
-    "success": true,
-    "results": {
-    "otp": "",
-    "id": "1234",
-    "name": "My Name",
-    "username": "payonid",
-    "balance": "10000",
-    "token": "1234:xM3pN0FdotaTinGbLwhz7v8RfKC4SYgU"
+                        <pre><code class="language-json">{
+"success": true,
+"results": [
+{
+    "id": 71,
+    "nominal": "BRONET 300MB 7Hr",
+    "keterangan": "",
+    "harga": 7625,
+    "harga_str": "Rp 7.625",
+    "provider": {
+        "id": 10,
+        "nama": "AXIS DATA BRONET"
+    },
+    "produk": {
+        "id": "paket_internet",
+        "nama": "Paket Internet"
     }
+},
+{
+    "id": 72,
+    "nominal": "BRONET 1GB 30Hr",
+    "keterangan": "",
+    "harga": 18650,
+    "harga_str": "Rp 18.650",
+    "provider": {
+        "id": 10,
+        "nama": "AXIS DATA BRONET"
+    },
+    "produk": {
+        "id": "paket_internet",
+        "nama": "Paket Internet"
+    }
+},
+{
+    "id": 137,
+    "nominal": "HotRod 24Jam, 30hr, 800MB",
+    "keterangan": "",
+    "harga": 30550,
+    "harga_str": "Rp 30.550",
+    "provider": {
+        "id": 22,
+        "nama": "XL INTERNET HOTROD"
+    },
+    "produk": {
+        "id": "paket_internet",
+        "nama": "Paket Internet"
+    }
+},
+{
+    "id": 138,
+    "nominal": "HotRod 24Jam, 30hr, 3GB",
+    "keterangan": "",
+    "harga": 55775,
+    "harga_str": "Rp 55.775",
+    "provider": {
+        "id": 22,
+        "nama": "XL INTERNET HOTROD"
+    },
+    "produk": {
+        "id": "paket_internet",
+        "nama": "Paket Internet"
+    }
+},
+{
+    "id": 1,
+    "nominal": "AXIS 5000",
+    "keterangan": "",
+    "harga": 6100,
+    "harga_str": "Rp 6.100",
+    "provider": {
+        "id": 1,
+        "nama": "AXIS"
+    },
+    "produk": {
+        "id": "pulsa",
+        "nama": "Pulsa"
+    }
+},
+{
+    "id": 64,
+    "nominal": "AXIS 10000",
+    "keterangan": "",
+    "harga": 11200,
+    "harga_str": "Rp 11.200",
+    "provider": {
+        "id": 1,
+        "nama": "AXIS"
+    },
+    "produk": {
+        "id": "pulsa",
+        "nama": "Pulsa"
+    }
+},
+{
+    "id": 33,
+    "nominal": "TELKOMSEL 1000",
+    "keterangan": "",
+    "harga": 2100,
+    "harga_str": "Rp 2.100",
+    "provider": {
+        "id": 4,
+        "nama": "TELKOMSEL"
+    },
+    "produk": {
+        "id": "pulsa",
+        "nama": "Pulsa"
+    }
+},
+{
+    "id": 24,
+    "nominal": "TELKOMSEL 5000",
+    "keterangan": "",
+    "harga": 5825,
+    "harga_str": "Rp 5.825",
+    "provider": {
+        "id": 4,
+        "nama": "TELKOMSEL"
+    },
+    "produk": {
+        "id": "pulsa",
+        "nama": "Pulsa"
+    }
+}
+]
 }</code></pre>
                         </div>
 
@@ -765,51 +879,74 @@ curl_close($ch);
                         <div class="res-menu-link request">
                             <h3>Request</h3>
                             <h4 class="url">URL</h4>
-                            <p>https://payon.id/api/main/login</p>
+                            <p>https://payon.id/api/main/order</p>
                             <h4 class="method">Method</h4>
                             <p>POST or GET</p>
                             <h4 class="parameters">Parameters</h4>
                             <ul>
-                                <li>username : (Required) Username akun</li>
-                                <li>password : (Required) Password akun</li>
+                                <li>auth_username : (Required) Username akun</li>
+                                <li>auth_token : (Required) Token yang didapat ketika berhasil login</li>
+                                <li>voucher_id : (Required) ID Voucher lihat di daftar harga (id)</li>
+                                <li>phone : (Required) Nomor HP pembeli atau nomor HP yang akan diisi ulang</li>
+                                <li>id_plgn : (Optional) ID Pelanggan untuk order token PLN / Tagihan</li>
+                                <li>payment : (Required) Static=balance</li>
                             </ul>
                         </div>
                         <!-- response -->
                         <div class="res-menu-link response">
                             <h3>Response</h3>
-                            <pre><code class="language-json">{
-    "success": true,
-    "results": {
-    "otp": "",
-    "id": "1234",
-    "name": "My Name",
-    "username": "payonid",
-    "balance": "10000",
-    "token": "1234:xM3pN0FdotaTinGbLwhz7v8RfKC4SYgU"
-    }
+                        <pre><code class="language-json">{
+"success": true,
+"status": true,
+"results": {
+"id": 240,
+"no_hp": "083812345678",
+"id_plgn": "",
+"harga": 7625,
+"harga_str": "Rp 7.625",
+"pembayaran": "Saldo Akun",
+"status": "240",
+"tanggal": "12/02/2019 00:50",
+"produk": {
+    "id": "paket_internet",
+    "nama": "Paket Internet"
+},
+"provider": {
+    "id": 10,
+    "nama": "AXIS DATA BRONET"
+},
+"voucher": {
+    "id": 71,
+    "nominal": "BRONET 300MB 7Hr"
+}
+}
 }</code></pre>
                         </div>
 
                         <!-- Example -->
                         <div class="res-menu-link example">
                             <h3>Example</h3>
-                        <pre><code class="language-php">
+                    <pre><code class="language-php">
 ?php
 
 $parameters = array(
-"username" => "",
-"password" => "",
+"auth_username" => "payonid",
+"auth_token" => "1234:xM3pN0FdotaTinGbLwhz7v8RfKC4SYgU",
+"voucher_id" => "71",
+"phone" => "083812345678",
+"id_plgn" => "",
+"payment" => "balance",
 );
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "https://payon.id/api/main/login");
+curl_setopt($ch, CURLOPT_URL, "https://payon.id/api/main/order");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($parameters));
 $response = curl_exec($ch);
 curl_close($ch);
-                        </code></pre>
+                    </code></pre>
                         </div>
                         </div>
                         </div>
@@ -825,51 +962,87 @@ curl_close($ch);
                         <div class="res-menu-link request">
                             <h3>Request</h3>
                             <h4 class="url">URL</h4>
-                            <p>https://payon.id/api/main/login</p>
+                            <p>https://payon.id/api/main/transaction-details</p>
                             <h4 class="method">Method</h4>
                             <p>POST or GET</p>
                             <h4 class="parameters">Parameters</h4>
                             <ul>
-                                <li>username : (Required) Username akun</li>
-                                <li>password : (Required) Password akun</li>
+                                <li>auth_username : (Required) Username akun</li>
+                                <li>auth_token : (Required) Token yang didapat ketika berhasil login</li>
+                                <li>id : (Required) ID Transaksi yang didapat ketika pembelian (results.id)</li>
                             </ul>
                         </div>
                         <!-- response -->
                         <div class="res-menu-link response">
                             <h3>Response</h3>
-                            <pre><code class="language-json">{
-    "success": true,
-    "results": {
-    "otp": "",
-    "id": "1234",
-    "name": "My Name",
-    "username": "payonid",
-    "balance": "10000",
-    "token": "1234:xM3pN0FdotaTinGbLwhz7v8RfKC4SYgU"
+                        <pre><code class="language-json">{
+"success": true,
+"results": {
+"id": 240,
+"phone": "083812345678",
+"id_plgn": "",
+"harga": "Rp 7.625",
+"kode_unik": "Rp 0",
+"pembayaran": {
+    "id": "balance",
+    "invoice_id": "inv907447",
+    "nama": "Saldo Akun",
+    "expired": true,
+    "expired_date": "12/02/2019 08:50",
+    "tanggal": "",
+    "logo": "",
+    "rekening": null
+},
+"status": {
+    "code": "IP",
+    "pembayaran": "Sukses",
+    "pengisian": "Pending"
+},
+"batalkan": false,
+"sn": "",
+"tanggal": "12/02/2019 00:50",
+"voucher": {
+    "id": 71,
+    "nominal": "BRONET 300MB 7Hr"
+},
+"provider": {
+    "id": 10,
+    "nama": "AXIS DATA BRONET"
+},
+"produk": {
+    "id": "paket_internet",
+    "nama": "Paket Internet",
+    "labels": {
+        "provider": "Provider",
+        "voucher": "Voucher2"
     }
+},
+"testimonial": null
+}
 }</code></pre>
                         </div>
 
                         <!-- Example -->
                         <div class="res-menu-link example">
                             <h3>Example</h3>
-                        <pre><code class="language-php">
+                    <pre><code class="language-php">
 ?php
 
 $parameters = array(
-"username" => "",
-"password" => "",
+"auth_username" => "payonid",
+"auth_token" => "1234:xM3pN0FdotaTinGbLwhz7v8RfKC4SYgU",
+"id" => "240",
 );
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "https://payon.id/api/main/login");
+curl_setopt($ch, CURLOPT_URL, "https://payon.id/api/main/transaction-details");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($parameters));
 $response = curl_exec($ch);
 curl_close($ch);
-                        </code></pre>
+                    </code></pre>
                         </div>
                         </div>
                         </div>
